@@ -11,6 +11,8 @@ window.addEventListener('load', function (){
         setInterval(function(){
           v = v ? 0 : 1;
           port.write(v);
+          if(v){document.querySelector("h2").className = "on";}
+          else{document.querySelector("h2").className = "off";}
         },1000);
       });
   });
